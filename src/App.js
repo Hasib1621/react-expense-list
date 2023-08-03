@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Expenses from './components/Expenses';
 import NewExpense from './components/NewExpense';
@@ -30,10 +31,18 @@ const DUMMY_EXPENSES = [
 ];
 
 function App() {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const addExpense = (data) => {
+    setExpenses((prevData) => {
+      return [...prevData, data];
+    });
+  };
+
   return (
     <div className='App'>
-      <NewExpense />
-      <Expenses expenses={DUMMY_EXPENSES} />
+      <NewExpense onAdd={addExpense} />
+      <Expenses expenses={expenses} />
     </div>
   );
 }

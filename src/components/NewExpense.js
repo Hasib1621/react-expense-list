@@ -13,10 +13,20 @@ const NewExpense = (props) => {
     setIsAdding(false);
   };
 
+  const afterSubmit = () => {
+    setIsAdding(false);
+  };
+
   return (
     <div className={classes['new-expense']}>
       {!isAdding && <button onClick={addHandler}>Add New Expense</button>}
-      {isAdding && <ExpenseForm onCancel={cancelHandler} />}
+      {isAdding && (
+        <ExpenseForm
+          onAfterSubmit={afterSubmit}
+          onAdd={props.onAdd}
+          onCancel={cancelHandler}
+        />
+      )}
     </div>
   );
 };
