@@ -1,11 +1,11 @@
+import ExpenseList from './ExpenseList';
 import Card from './UI/Card';
+import './Expenses.css';
 
 const Expenses = (props) => {
   return (
-    <Card>
-      {props.expenses.map((item) => (
-        <li>{item.title}</li>
-      ))}
+    <Card className='expenses'>
+      <ExpenseList expenses={props.expenses} />
     </Card>
   );
 };
