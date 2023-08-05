@@ -1,4 +1,9 @@
-About this project: This project is about an expense list where user can input their expenses and see the total expenses with bar chart visualisation in any individual year. This project is built with basic react concepts such as useState.
+# Live Demo:
+https://react-expense-list.netlify.app/
+
+# About this project: 
+This project is about an expense list where user can input their expenses and see the total expenses with bar chart visualisation in any individual year. This project is built with basic react concepts such as useState.
+
 Hook used: useState only.
 
 # Getting Started with Create React App
